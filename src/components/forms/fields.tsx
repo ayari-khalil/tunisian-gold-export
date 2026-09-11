@@ -11,9 +11,9 @@ export function Field({
 }: {
   label: string;
   htmlFor: string;
-  error?: string;
-  required?: boolean;
-  className?: string;
+  error?: string | undefined;
+  required?: boolean | undefined;
+  className?: string | undefined;
   children: ReactNode;
 }) {
   return (

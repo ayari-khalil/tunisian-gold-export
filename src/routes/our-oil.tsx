@@ -1,8 +1,9 @@
-import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/our-oil")({
-  component: () => <Outlet />,
+  component: OurOilLayout,
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const _unused = useRouterState;
+function OurOilLayout() {
+  return <Outlet />;
+}
