@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as OurOilRouteImport } from './routes/our-oil'
+import { Route as OurOilIndexRouteImport } from './routes/our-oil.index'
+import { Route as OurOilSlugRouteImport } from './routes/our-oil.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +24,46 @@ const OurOilRoute = OurOilRouteImport.update({
   path: '/our-oil',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurOilIndexRoute = OurOilIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OurOilRoute,
+} as any)
+const OurOilSlugRoute = OurOilSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => OurOilRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/our-oil': typeof OurOilRoute
+  '/our-oil': typeof OurOilRouteWithChildren
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/our-oil/': typeof OurOilIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/our-oil': typeof OurOilRoute
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/our-oil': typeof OurOilIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/our-oil': typeof OurOilRoute
+  '/our-oil': typeof OurOilRouteWithChildren
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/our-oil/': typeof OurOilIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/our-oil'
+  fullPaths: '/' | '/our-oil' | '/our-oil/$slug' | '/our-oil/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/our-oil'
-  id: '__root__' | '/' | '/our-oil'
+  to: '/' | '/our-oil/$slug' | '/our-oil'
+  id: '__root__' | '/' | '/our-oil' | '/our-oil/$slug' | '/our-oil/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  OurOilRoute: typeof OurOilRoute
+  OurOilRoute: typeof OurOilRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +82,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurOilRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-oil/': {
+      id: '/our-oil/'
+      path: '/'
+      fullPath: '/our-oil/'
+      preLoaderRoute: typeof OurOilIndexRouteImport
+      parentRoute: typeof OurOilRoute
+    }
+    '/our-oil/$slug': {
+      id: '/our-oil/$slug'
+      path: '/$slug'
+      fullPath: '/our-oil/$slug'
+      preLoaderRoute: typeof OurOilSlugRouteImport
+      parentRoute: typeof OurOilRoute
+    }
   }
 }
 
+interface OurOilRouteChildren {
+  OurOilSlugRoute: typeof OurOilSlugRoute
+  OurOilIndexRoute: typeof OurOilIndexRoute
+}
+
+const OurOilRouteChildren: OurOilRouteChildren = {
+  OurOilSlugRoute: OurOilSlugRoute,
+  OurOilIndexRoute: OurOilIndexRoute,
+}
+
+const OurOilRouteWithChildren =
+  OurOilRoute._addFileChildren(OurOilRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  OurOilRoute: OurOilRoute,
+  OurOilRoute: OurOilRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
