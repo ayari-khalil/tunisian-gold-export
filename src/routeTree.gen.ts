@@ -10,33 +10,224 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExportRouteImport } from './routes/export'
+import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as OurOilRouteImport } from './routes/our-oil'
+import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as PackagingRouteImport } from './routes/packaging'
+import { Route as PrivateLabelRouteImport } from './routes/private-label'
+import { Route as QualityRouteImport } from './routes/quality'
+import { Route as RequestQuoteRouteImport } from './routes/request-quote'
+import { Route as RequestSampleRouteImport } from './routes/request-sample'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
+import { Route as OurOilIndexRouteImport } from './routes/our-oil.index'
+import { Route as OurOilSlugRouteImport } from './routes/our-oil.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExportRoute = ExportRouteImport.update({
+  id: '/export',
+  path: '/export',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurOilRoute = OurOilRouteImport.update({
+  id: '/our-oil',
+  path: '/our-oil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurStoryRoute = OurStoryRouteImport.update({
+  id: '/our-story',
+  path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagingRoute = PackagingRouteImport.update({
+  id: '/packaging',
+  path: '/packaging',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivateLabelRoute = PrivateLabelRouteImport.update({
+  id: '/private-label',
+  path: '/private-label',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualityRoute = QualityRouteImport.update({
+  id: '/quality',
+  path: '/quality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestQuoteRoute = RequestQuoteRouteImport.update({
+  id: '/request-quote',
+  path: '/request-quote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestSampleRoute = RequestSampleRouteImport.update({
+  id: '/request-sample',
+  path: '/request-sample',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const OurOilIndexRoute = OurOilIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OurOilRoute,
+} as any)
+const OurOilSlugRoute = OurOilSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => OurOilRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/export': typeof ExportRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/our-oil': typeof OurOilRouteWithChildren
+  '/our-story': typeof OurStoryRoute
+  '/packaging': typeof PackagingRoute
+  '/private-label': typeof PrivateLabelRoute
+  '/quality': typeof QualityRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/request-sample': typeof RequestSampleRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/our-oil/': typeof OurOilIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/export': typeof ExportRoute
+  '/our-story': typeof OurStoryRoute
+  '/packaging': typeof PackagingRoute
+  '/private-label': typeof PrivateLabelRoute
+  '/quality': typeof QualityRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/request-sample': typeof RequestSampleRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/insights': typeof InsightsIndexRoute
+  '/our-oil': typeof OurOilIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/export': typeof ExportRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/our-oil': typeof OurOilRouteWithChildren
+  '/our-story': typeof OurStoryRoute
+  '/packaging': typeof PackagingRoute
+  '/private-label': typeof PrivateLabelRoute
+  '/quality': typeof QualityRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/request-sample': typeof RequestSampleRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/our-oil/$slug': typeof OurOilSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/our-oil/': typeof OurOilIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/export'
+    | '/insights'
+    | '/our-oil'
+    | '/our-story'
+    | '/packaging'
+    | '/private-label'
+    | '/quality'
+    | '/request-quote'
+    | '/request-sample'
+    | '/insights/$slug'
+    | '/our-oil/$slug'
+    | '/insights/'
+    | '/our-oil/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/export'
+    | '/our-story'
+    | '/packaging'
+    | '/private-label'
+    | '/quality'
+    | '/request-quote'
+    | '/request-sample'
+    | '/insights/$slug'
+    | '/our-oil/$slug'
+    | '/insights'
+    | '/our-oil'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/export'
+    | '/insights'
+    | '/our-oil'
+    | '/our-story'
+    | '/packaging'
+    | '/private-label'
+    | '/quality'
+    | '/request-quote'
+    | '/request-sample'
+    | '/insights/$slug'
+    | '/our-oil/$slug'
+    | '/insights/'
+    | '/our-oil/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  ExportRoute: typeof ExportRoute
+  InsightsRoute: typeof InsightsRouteWithChildren
+  OurOilRoute: typeof OurOilRouteWithChildren
+  OurStoryRoute: typeof OurStoryRoute
+  PackagingRoute: typeof PackagingRoute
+  PrivateLabelRoute: typeof PrivateLabelRoute
+  QualityRoute: typeof QualityRoute
+  RequestQuoteRoute: typeof RequestQuoteRoute
+  RequestSampleRoute: typeof RequestSampleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +239,154 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/export': {
+      id: '/export'
+      path: '/export'
+      fullPath: '/export'
+      preLoaderRoute: typeof ExportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-oil': {
+      id: '/our-oil'
+      path: '/our-oil'
+      fullPath: '/our-oil'
+      preLoaderRoute: typeof OurOilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-story': {
+      id: '/our-story'
+      path: '/our-story'
+      fullPath: '/our-story'
+      preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packaging': {
+      id: '/packaging'
+      path: '/packaging'
+      fullPath: '/packaging'
+      preLoaderRoute: typeof PackagingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/private-label': {
+      id: '/private-label'
+      path: '/private-label'
+      fullPath: '/private-label'
+      preLoaderRoute: typeof PrivateLabelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quality': {
+      id: '/quality'
+      path: '/quality'
+      fullPath: '/quality'
+      preLoaderRoute: typeof QualityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-quote': {
+      id: '/request-quote'
+      path: '/request-quote'
+      fullPath: '/request-quote'
+      preLoaderRoute: typeof RequestQuoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-sample': {
+      id: '/request-sample'
+      path: '/request-sample'
+      fullPath: '/request-sample'
+      preLoaderRoute: typeof RequestSampleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights/': {
+      id: '/insights/'
+      path: '/'
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/our-oil/': {
+      id: '/our-oil/'
+      path: '/'
+      fullPath: '/our-oil/'
+      preLoaderRoute: typeof OurOilIndexRouteImport
+      parentRoute: typeof OurOilRoute
+    }
+    '/our-oil/$slug': {
+      id: '/our-oil/$slug'
+      path: '/$slug'
+      fullPath: '/our-oil/$slug'
+      preLoaderRoute: typeof OurOilSlugRouteImport
+      parentRoute: typeof OurOilRoute
+    }
   }
 }
 
+interface InsightsRouteChildren {
+  InsightsSlugRoute: typeof InsightsSlugRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
+}
+
+const InsightsRouteChildren: InsightsRouteChildren = {
+  InsightsSlugRoute: InsightsSlugRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
+}
+
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren,
+)
+
+interface OurOilRouteChildren {
+  OurOilSlugRoute: typeof OurOilSlugRoute
+  OurOilIndexRoute: typeof OurOilIndexRoute
+}
+
+const OurOilRouteChildren: OurOilRouteChildren = {
+  OurOilSlugRoute: OurOilSlugRoute,
+  OurOilIndexRoute: OurOilIndexRoute,
+}
+
+const OurOilRouteWithChildren =
+  OurOilRoute._addFileChildren(OurOilRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  ExportRoute: ExportRoute,
+  InsightsRoute: InsightsRouteWithChildren,
+  OurOilRoute: OurOilRouteWithChildren,
+  OurStoryRoute: OurStoryRoute,
+  PackagingRoute: PackagingRoute,
+  PrivateLabelRoute: PrivateLabelRoute,
+  QualityRoute: QualityRoute,
+  RequestQuoteRoute: RequestQuoteRoute,
+  RequestSampleRoute: RequestSampleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

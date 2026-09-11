@@ -14,27 +14,27 @@ export interface SampleRequestPayload {
   country: string;
   businessType: string;
   productInterest: string;
-  estimatedVolume?: string;
-  message?: string;
+  estimatedVolume?: string | undefined;
+  message?: string | undefined;
 }
 
 export interface QuoteRequestPayload {
   companyName: string;
   contactName: string;
   email: string;
-  phone?: string;
+  phone?: string | undefined;
   country: string;
   product: string;
   packaging: string;
   quantity: string;
   incoterm: string;
-  destinationPort?: string;
-  message?: string;
+  destinationPort?: string | undefined;
+  message?: string | undefined;
 }
 
 export interface ContactPayload {
   name: string;
-  company?: string;
+  company?: string | undefined;
   email: string;
   subject: string;
   message: string;
