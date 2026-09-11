@@ -45,14 +45,12 @@ function Home() {
 
       <Section>
         <div className="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <RevealImage className="order-last lg:order-first">
-            <img
-              src={mill}
-              alt="Freshly milled Tunisian olive oil running from the press"
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </RevealImage>
+          <RevealImage
+            src={mill}
+            alt="Freshly milled Tunisian olive oil running from the press"
+            ratio="aspect-[4/5]"
+            className="order-last lg:order-first"
+          />
           <div>
             <SectionHeading
               eyebrow="Our product"
