@@ -4,8 +4,8 @@ export const site = {
   tagline: "Premium Tunisian Extra Virgin Olive Oil — Crafted in Tunisia, Delivered Globally.",
   email: "export@darzitouna-gold.com",
   phone: "+216 71 840 920",
-  address: "Sfax & Radès Port Logistics Hub, Tunisia",
-  addressDetail: "Route de Gabès Km 4, Sfax 3000 / Zone Portuaire FCL Export, Radès, Tunisia",
+  address: "Tunis & Bizerte Export Logistics Hub, Tunisia",
+  addressDetail: "Avenue Habib Bourguiba, Tunis 1001 / Zone Portuaire FCL Export, Radès & Bizerte, Tunisia",
   hours: "Monday – Friday, 08:00 – 18:00 (GMT+1)",
   social: {
     linkedin: "https://linkedin.com/company/darzitouna-export",

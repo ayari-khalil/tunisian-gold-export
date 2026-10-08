@@ -12,7 +12,7 @@ export const products: Product[] = [
     description:
       "A balanced Tunisian extra virgin olive oil prepared for retail shelves and professional kitchens that need dependable quality across repeat orders.",
     longDescription:
-      "Selected from certified Tunisian groves in Sfax and Central Tunisia, this is our core export reference grade for international importers and food-service buyers. Cold-extracted below 27 °C within 12 hours of harvest to preserve golden aroma and low acidity.",
+      "Selected from certified groves in Bizerte, Zaghouan, Béja and Le Kef, this is our core export reference grade for international importers and food-service buyers. Cold-extracted below 27 °C within 12 hours of harvest to preserve golden aroma and low acidity.",
     image: bottle,
     packaging: ["Marasca glass bottle", "Dorica dark glass", "Metal tin", "Flexitank bulk"],
     volumes: ["250 ml", "500 ml", "750 ml", "1 L", "3 L", "5 L", "Bulk Flexitank"],
@@ -22,14 +22,14 @@ export const products: Product[] = [
     harvest: "November – February harvest cycle, certified lot per batch",
     storage: "Store between 14–18 °C, away from direct sunlight and humidity",
     specs: [
-      { label: "Origin", value: "Sfax & Sahel Region, Tunisia" },
-      { label: "Olive Variety", value: "Chemlali (100% Pure)" },
+      { label: "Origin", value: "Bizerte, Zaghouan & Northern Tunisia" },
+      { label: "Olive Variety", value: "Chétoui & Chemlali Blend" },
       { label: "Free Fatty Acidity", value: "< 0.4% (Max IOC limit 0.8%)" },
       { label: "Peroxide Value", value: "< 12 meq O2/kg" },
       { label: "Extraction", value: "Cold Extracted (< 27 °C)" },
       { label: "Certifications", value: "ISO 22000, HACCP, Halal Certified, BRCGS" },
       { label: "Laboratory Analysis", value: "Full IOC certified lab analysis with COA per shipment" },
-      { label: "Export Port", value: "Port of Radès / Port of Sfax, Tunisia" },
+      { label: "Export Port", value: "Port of Radès / Port of Bizerte, Tunisia" },
     ],
   },
   {

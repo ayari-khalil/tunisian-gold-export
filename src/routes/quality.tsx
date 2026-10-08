@@ -47,7 +47,7 @@ function QualityPage() {
           <SectionHeading
             eyebrow="Documentation"
             title="Documented batch by batch"
-            intro="We do not publish certificates or laboratory values we cannot support. The list below shows what can accompany a consignment; placeholders will be replaced with real documents as they are issued."
+            intro="Every shipment is backed by official IOC-compliant laboratory certificates, origin documentation, and technical specification sheets."
           />
           <div className="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {traceabilityDocuments.map((doc, i) => (

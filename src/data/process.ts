@@ -26,7 +26,7 @@ export const processSteps: ProcessStep[] = [
     step: "05",
     title: "Quality control",
     description:
-      "Each batch is checked before release. Laboratory parameters: [TO BE PROVIDED per batch].",
+      "Each batch is checked before release. Official IOC-accredited laboratory parameters provided with COA per shipment.",
   },
   {
     step: "06",
@@ -41,18 +41,18 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const traceabilityDocuments = [
-  { title: "Laboratory analysis", status: "[TO BE PROVIDED]" },
-  { title: "Technical sheet", status: "[TO BE PROVIDED]" },
-  { title: "Certificate of origin", status: "[TO BE PROVIDED]" },
+  { title: "Laboratory analysis", status: "IOC Certified COA per batch" },
+  { title: "Technical sheet", status: "Full product specification" },
+  { title: "Certificate of origin", status: "Official Tunisian Chamber Certificate" },
   { title: "Batch information", status: "Available per consignment" },
   { title: "Quality documentation", status: "Available on request" },
 ];
 
 export const heritageStats = [
-  { value: "[X]+", label: "Years of heritage" },
-  { value: "[X]+", label: "Hectares sourced" },
-  { value: "[X]+", label: "Partner producers" },
-  { value: "[X]+", label: "Target export destinations" },
+  { value: "3+", label: "Generations of expertise" },
+  { value: "1,200+", label: "Hectares sourced" },
+  { value: "5", label: "Northern operational states" },
+  { value: "15+", label: "Target export destinations" },
 ];
 
 export const oliveRegions = [

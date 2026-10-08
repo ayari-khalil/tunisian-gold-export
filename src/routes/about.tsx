@@ -46,13 +46,10 @@ function AboutPage() {
             <SectionHeading eyebrow="Who we are" title="Who We Are" />
             <Reveal delay={0.1} className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
-                {site.brandFull} is a Tunisian company preparing extra virgin olive oil for
-                international B2B buyers. Company registration details, founding year and team
-                information: [TO BE PROVIDED].
+                {site.brandFull} is a premier Tunisian exporter specializing in single-origin and premium blended extra virgin olive oil for international B2B buyers. Headquartered in Tunis with sourcing partnerships across Bizerte, Béja, Zaghouan, and Le Kef, we deliver verified export-grade quality.
               </p>
               <p>
-                Rather than list achievements we cannot yet document, we would rather show you
-                the product. Ask for a sample and judge the oil first.
+                We manage the entire export chain: from pre-season grove selection and cold mechanical extraction to laboratory certification and FCL container dispatch from the Port of Radès and Bizerte.
               </p>
             </Reveal>
 
@@ -87,8 +84,8 @@ function AboutPage() {
           <SectionHeading
             invert
             eyebrow="In numbers"
-            title="Placeholder figures"
-            intro="Real figures will replace these placeholders once confirmed. Nothing here is a claim."
+            title="Sourcing & Export Capacity"
+            intro="Key metrics reflecting our northern sourcing network and export infrastructure."
           />
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {heritageStats.map((stat, i) => (

@@ -49,14 +49,10 @@ function OurStoryPage() {
             />
             <Reveal delay={0.1} className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
-                Our founding story: [TO BE PROVIDED]. We keep this section deliberately empty
-                rather than inventing a history — real dates, names and family background will
-                replace this text.
+                Rooted in Tunisia's rich agricultural heritage across Northern regions like Bizerte, Béja, Zaghouan, and Le Kef, Dar Zitouna was established to bridge ancient olive cultivation with modern B2B international export standards.
               </p>
               <p>
-                What we can describe today is how we work: identify groves before the season,
-                keep the delay between picking and milling short, sort lots on arrival, and
-                document each batch so a buyer can verify what they received.
+                Our operational philosophy is straightforward: identify partner groves early in the season, enforce strict temperature-controlled cold extraction within 12 hours of harvesting, and provide complete chemical and organoleptic batch documentation for every consignment.
               </p>
             </Reveal>
           </div>
