@@ -6,14 +6,11 @@ const TUNISIA_PATH =
   "M96 12 L118 20 L128 44 L120 66 L128 88 L116 112 L118 140 L104 168 L96 200 L86 236 L74 268 L62 300 L54 336 L40 330 L34 300 L44 268 L38 240 L48 210 L44 178 L56 150 L52 120 L64 92 L60 62 L74 36 Z";
 
 const pins = [
-  { name: "Béja", x: 66, y: 44 },
-  { name: "Nabeul", x: 112, y: 58 },
-  { name: "Kairouan", x: 84, y: 108 },
-  { name: "Sousse", x: 110, y: 108 },
-  { name: "Mahdia", x: 112, y: 140 },
-  { name: "Sfax", x: 104, y: 168 },
-  { name: "Gafsa", x: 64, y: 168 },
-  { name: "Médenine", x: 82, y: 240 },
+  { name: "Bizerte", x: 86, y: 22 },
+  { name: "Béja", x: 58, y: 44 },
+  { name: "Tunis", x: 104, y: 38 },
+  { name: "Zaghouan", x: 92, y: 64 },
+  { name: "Le Kef", x: 48, y: 76 },
 ];
 
 export function TunisiaMap() {

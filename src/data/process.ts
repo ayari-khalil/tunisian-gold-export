@@ -56,12 +56,9 @@ export const heritageStats = [
 ];
 
 export const oliveRegions = [
-  { name: "Béja", note: "Northern hills" },
-  { name: "Nabeul", note: "Cap Bon peninsula" },
-  { name: "Kairouan", note: "Central plains" },
-  { name: "Sousse", note: "Sahel coast" },
-  { name: "Sfax", note: "Historic olive belt" },
-  { name: "Mahdia", note: "Coastal groves" },
-  { name: "Gafsa", note: "Southern arid groves" },
-  { name: "Médenine", note: "Southern terraces" },
+  { name: "Bizerte", note: "Northern coastal groves" },
+  { name: "Béja", note: "Fertile northern hills" },
+  { name: "Zaghouan", note: "Zaghouan mountain valleys" },
+  { name: "Le Kef", note: "Highland olive groves" },
+  { name: "Tunis", note: "Port & export logistics hub" },
 ];
