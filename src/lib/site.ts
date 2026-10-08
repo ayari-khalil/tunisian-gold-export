@@ -1,16 +1,16 @@
 export const site = {
   brand: "Dar Zitouna",
-  brandFull: "Dar Zitouna Export",
-  tagline: "Premium Tunisian Extra Virgin Olive Oil — From Tunisia to the World.",
-  email: "contact@darzitouna-export.com",
-  phone: "[TO BE PROVIDED]",
-  address: "Tunis, Tunisia",
-  addressDetail: "[Full address TO BE PROVIDED]",
-  hours: "Monday – Friday, 08:30 – 17:30 (GMT+1)",
+  brandFull: "Dar Zitouna Gold Export SARL",
+  tagline: "Premium Tunisian Extra Virgin Olive Oil — Crafted in Tunisia, Delivered Globally.",
+  email: "export@darzitouna-gold.com",
+  phone: "+216 71 840 920",
+  address: "Sfax & Radès Port Logistics Hub, Tunisia",
+  addressDetail: "Route de Gabès Km 4, Sfax 3000 / Zone Portuaire FCL Export, Radès, Tunisia",
+  hours: "Monday – Friday, 08:00 – 18:00 (GMT+1)",
   social: {
-    linkedin: "#",
-    instagram: "#",
-    facebook: "#",
+    linkedin: "https://linkedin.com/company/darzitouna-export",
+    instagram: "https://instagram.com/darzitouna.oil",
+    facebook: "https://facebook.com/darzitouna.export",
   },
 } as const;
 

@@ -8,6 +8,7 @@ import { ExportMap } from "@/components/sections/ExportMap";
 import { BuyerSegments } from "@/components/sections/BuyerSegments";
 import { PrivateLabelFlow } from "@/components/sections/PrivateLabelFlow";
 import { PackagingShowcase } from "@/components/sections/PackagingShowcase";
+import { BottleCustomizer } from "@/components/sections/BottleCustomizer";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Section, SectionHeading } from "@/components/common/Section";
 import { Reveal, RevealImage } from "@/components/common/Reveal";
@@ -86,6 +87,13 @@ function Home() {
       <ExportMap />
       <BuyerSegments />
       <PrivateLabelFlow />
+
+      <Section tone="ivory">
+        <div className="container-x">
+          <BottleCustomizer />
+        </div>
+      </Section>
+
       <PackagingShowcase />
       <CtaBanner
         title="Taste before you commit."

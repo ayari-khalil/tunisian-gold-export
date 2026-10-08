@@ -9,9 +9,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mainNav, site } from "@/lib/site";
+import { mainNav } from "@/lib/site";
 import { languages, useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import { BrandLogo } from "@/components/common/BrandLogo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,23 +50,8 @@ export function Navbar() {
       )}
     >
       <nav className="container-x flex h-18 items-center justify-between gap-6 py-4">
-        <Link to="/" className="group flex flex-col leading-none">
-          <span
-            className={cn(
-              "font-serif text-2xl transition-colors",
-              solid ? "text-foreground" : "text-olive-foreground",
-            )}
-          >
-            {site.brand}
-          </span>
-          <span
-            className={cn(
-              "label-xs mt-1 transition-colors",
-              solid ? "text-muted-foreground" : "text-olive-foreground/70",
-            )}
-          >
-            Tunisian Olive Oil Export
-          </span>
+        <Link to="/" className="outline-none focus-visible:ring-2 focus-visible:ring-olive rounded">
+          <BrandLogo variant="navbar" solid={solid} />
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">

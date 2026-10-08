@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/lib/site";
+import { BrandLogo } from "@/components/common/BrandLogo";
 
 const columns = [
   {
@@ -30,8 +31,9 @@ export function Footer() {
     <footer className="bg-olive-deep text-olive-foreground">
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
         <div>
-          <p className="font-serif text-3xl">{site.brand}</p>
-          <p className="label-xs mt-2 text-olive-foreground/60">Tunisian Olive Oil Export</p>
+          <Link to="/" className="inline-block">
+            <BrandLogo variant="footer" />
+          </Link>
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-olive-foreground/70">
             Premium Tunisian Extra Virgin Olive Oil, prepared for importers, distributors and
             private-label partners worldwide.
