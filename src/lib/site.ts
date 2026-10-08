@@ -16,10 +16,10 @@ export const site = {
 
 export const mainNav = [
   { label: "Our Oil", to: "/our-oil" },
+  { label: "Bottle Sizes", to: "/packaging" },
   { label: "Our Story", to: "/our-story" },
   { label: "Quality", to: "/quality" },
   { label: "Export", to: "/export" },
-  { label: "Packaging", to: "/packaging" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ] as const;

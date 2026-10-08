@@ -7,6 +7,7 @@ import { TunisiaMap } from "@/components/sections/TunisiaMap";
 import { ExportMap } from "@/components/sections/ExportMap";
 import { BuyerSegments } from "@/components/sections/BuyerSegments";
 import { PrivateLabelFlow } from "@/components/sections/PrivateLabelFlow";
+import { BottleSizesShowcase } from "@/components/sections/BottleSizesShowcase";
 import { PackagingShowcase } from "@/components/sections/PackagingShowcase";
 import { BottleCustomizer } from "@/components/sections/BottleCustomizer";
 import { CtaBanner } from "@/components/sections/CtaBanner";
@@ -82,6 +83,7 @@ function Home() {
       </Section>
 
       <ProductShowcase tone="sand" />
+      <BottleSizesShowcase />
       <ProcessJourney />
       <TunisiaMap />
       <ExportMap />

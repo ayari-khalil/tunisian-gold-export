@@ -43,6 +43,21 @@ export interface PackagingFormat {
   image: string;
 }
 
+export interface BottleSizeFormat {
+  id: string;
+  name: string;
+  volume: string;
+  image: string;
+  category: string;
+  idealFor: string;
+  description: string;
+  dimensions: string;
+  cartonQuantity: string;
+  palletQuantity: string;
+  capType: string;
+  containerMoq: string;
+}
+
 export interface MarketRegion {
   region: string;
   countries: string[];

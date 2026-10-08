@@ -1,24 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/common/PageHeader";
+import { BottleSizesShowcase } from "@/components/sections/BottleSizesShowcase";
 import { PackagingShowcase } from "@/components/sections/PackagingShowcase";
 import { PrivateLabelFlow } from "@/components/sections/PrivateLabelFlow";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { site } from "@/lib/site";
-import tin from "@/assets/product-tin.jpg";
+import bottle from "@/assets/product-bottle.jpg";
 
 export const Route = createFileRoute("/packaging")({
   head: () => ({
     meta: [
-      { title: `Packaging Formats — Bottles, Tins & Bulk | ${site.brand}` },
+      { title: `Bottle Sizes & Packaging Formats | ${site.brand}` },
       {
         name: "description",
         content:
-          "Glass bottles, metal tins, food-service containers and bulk formats for retail, hospitality and private-label olive oil programmes.",
+          "Explore our official range of extra virgin olive oil bottle sizes: 1L, 500ml, 250ml, and 250ml culinary spray for international importers and retail buyers.",
       },
-      { property: "og:title", content: `Packaging | ${site.brand}` },
+      { property: "og:title", content: `Bottle Sizes & Packaging Range | ${site.brand}` },
       {
         property: "og:description",
-        content: "Retail, food-service, bulk and private-label packaging for Tunisian olive oil.",
+        content: "Complete retail glass bottle sizes, tins, and spray formats for Tunisian extra virgin olive oil.",
       },
       { property: "og:url", content: "/packaging" },
     ],
@@ -31,17 +32,25 @@ function PackagingPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Packaging"
-        title="The format decides the shelf."
-        intro="Choose the presentation your market expects — retail glass, premium tin, food-service containers or bulk for filling locally."
-        image={tin}
+        eyebrow="Bottle Sizes & Formats"
+        title="The Right Format For Your Market Shelf."
+        intro="Explore our official packaging line: 1 Litre retail bottles, 500 ml Marasca/Dorica glass, 250 ml restaurant reserve bottles, and 250 ml culinary spray misting bottles."
+        image={bottle}
       />
+
+      {/* Featured 4 Real Bottle Sizes Section */}
+      <BottleSizesShowcase />
+
+      {/* Other Packaging Formats (Tins, Food Service, Bulk) */}
       <PackagingShowcase />
+
+      {/* Private Label Branding Pipeline */}
       <PrivateLabelFlow invert />
+
       <CtaBanner
-        title="Need a format we haven't listed?"
-        intro="Tell us the specification and we will confirm what is feasible."
-        primary={{ label: "Contact Us", to: "/contact" }}
+        title="Need Custom Labeling or a Specific Bottle Shape?"
+        intro="We supply private label branding, custom foil-stamped labels, and tailored export cartons for supermarket chains and regional distributors."
+        primary={{ label: "Request a Sample", to: "/request-sample" }}
         secondary={{ label: "Request a Quote", to: "/request-quote" }}
       />
     </>
