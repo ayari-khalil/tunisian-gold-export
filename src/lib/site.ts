@@ -3,7 +3,7 @@ export const site = {
   brandFull: "Dar Zitouna Gold Export SARL",
   tagline: "Premium Tunisian Extra Virgin Olive Oil — Crafted in Tunisia, Delivered Globally.",
   email: "export@darzitouna-gold.com",
-  phone: "+216 71 840 920",
+  phone: "+216 51 300 906",
   address: "Tunis & Bizerte Export Logistics Hub, Tunisia",
   addressDetail: "Avenue Habib Bourguiba, Tunis 1001 / Zone Portuaire FCL Export, Radès & Bizerte, Tunisia",
   hours: "Monday – Friday, 08:00 – 18:00 (GMT+1)",
